@@ -53,7 +53,11 @@ var getPageProfile = function(url, tab, callback){
 	        callback(null, body);
 	    } else{
 	    	var json = JSON.parse(body);
-	    	console.log(url);
+	    	console.log(json);
+	    	if(json.code === "not_authorized" || json.code === "invalid_param"){
+	    		callback(null, []);
+	    		return null;
+	    	}
 	    	tab = tab.concat(json.results);
 	    	if(json.meta.next){
     			getPageProfile(json.meta.next, tab, callback);
