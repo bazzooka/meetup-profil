@@ -1,7 +1,8 @@
 var orginalTemplate = document.getElementById('originalProfilTemplate').innerHTML,
 	profilContainer = document.getElementById("profilContainer");
 
-document.getElementById('meetupForm').addEventListener("submit", function(){
+document.getElementById('meetupForm').addEventListener("submit", function(e){
+	e.preventDefault();
 	$.ajax({
 		url: '/getInfos/' + document.getElementById('groupName').value + '/' + document.getElementById('apiKey').value,
 		success: function(response){
