@@ -22,8 +22,8 @@ app.get('/getInfos/:groupName/:meetupKey', function (req, res) {
 	});
 });
 
-var server = app.listen(3000, function () {
-  var host = server.address().address;
+var server = app.listen(process.argv[3] || 3000 , function () {
+  var host = process.argv[2] || server.address().address;
   var port = server.address().port;
 
   console.log('Example app listening at http://%s:%s', host, port);
