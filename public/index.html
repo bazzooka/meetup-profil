@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MEETUP PROFILES INFOS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body>
+	<div class="demo-layout">
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		  <header class="mdl-layout__header">
+		    <div class="mdl-layout-icon"></div>
+		    <div class="mdl-layout__header-row">
+		      <div class="mdl-layout-spacer"></div>
+		      <span class="mdl-layout-title">MEETUP PROFILES</span>
+		      <div class="mdl-layout-spacer"></div>
+		    </div>
+		  </header>
+			<main class="mdl-layout__content">
+		        <div class="page-content">
+		        	<!-- INSTRUCTIONS -->
+		        	<div class="mdl-grid">
+		        		<div class="mdl-cell mdl-cell--12-col explications">
+					    	Petit outil permettant de rapidement consulter les profils des utilisateurs de 
+					    	meetup.com<br/>
+					    	Saisissez le nom du groupe ainsi que le votre clé d'authentification disponible 
+					    	ici : <a  target="_blank" href="https://secure.meetup.com/fr/meetup_api/key/">VOTRE CLE D'AUTHENTIFICATION</a>
+				    	</div>
+				    </div>
+
+				    <!-- FORM INFOS -->
+				    <div class="meetupForm" id="meetupForm">
+				    	<form action="#">
+				    		<div class="mdl-grid">
+				    			<div class="mdl-cell mdl-cell--12-col form-content">
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+								    	<input class="mdl-textfield__input" type="text" id="apiKey" />
+								    	<label class="mdl-textfield__label" for="apiKey">Votre clé d'authentification meetup</label>
+								  	</div>
+							  	</div>
+
+								<div class="mdl-cell mdl-cell--12-col form-content">
+								  	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+								    	<input class="mdl-textfield__input" type="text" id="groupName" />
+								    	<label class="mdl-textfield__label" for="groupName">Nom du groupe</label>
+								  	</div>
+							  	</div>
+
+						  		<div class="mdl-cell mdl-cell--12-col form-content">
+							  	<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
+								  Envoyer
+								</button>
+								</div>
+						  	</div>
+						</form>
+	    			</div>
+	    			<!-- PROFILES -->
+	    			<div id="profilContainer">
+	    				
+	    			</div>
+		        </div>
+		      </main>
+			</div>
+
+	</div>
+
+
+	<div id="originalProfilTemplate" class="templateProfile hidden">
+
+
+
+		<div class="mdl-card mdl-shadow--2dp demo-card-square">
+		  <div class="mdl-card__title mdl-card--expand" style="background-image:url(%%PHOTO%%);">
+		    <h2 class="mdl-card__title-text">%%PSEUDO%%</h2>
+		  </div>
+		  <div class="mdl-card__supporting-text">
+		  	%%ANSWERS%%
+		  </div>
+		  <div class="mdl-card__actions mdl-card--border">
+		    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+		      <a target="_blank" href="http://www.meetup.com/fr/members/%%MEMBRE_ID%%">VOIR LE PROFIL</a>
+		    </a>
+		  </div>
+		</div>
+
+
+	</div>
+
+	
+
+	<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
+	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+	<style type="text/css">
+		.hidden {
+			display: none;
+		}
+		.master-title, .explications{
+			text-align: center;	
+		}
+
+		.form-content{
+			text-align: center;
+		}
+
+
+
+		.demo-card-square.mdl-card {
+		    width: 100%;
+		  }
+		  .demo-card-square > .mdl-card__title {
+		    color: #fff;
+		    background-size: contain;
+		    background-repeat: no-repeat;
+		    background-position: right 15%;
+		    background-color: #46B6AC;
+		  }
+	</style>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="/js/app.js"></script>
+</body>
+</html>
