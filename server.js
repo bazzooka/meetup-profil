@@ -10,7 +10,7 @@ var MEETUP_ENDPOINT = {
 
 
 /** EXPRESS CONFIG **/
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 /** EXPRESS ROUTES **/
 app.get('/getInfos/:groupName/:meetupKey', function (req, res) {
@@ -21,6 +21,7 @@ app.get('/getInfos/:groupName/:meetupKey', function (req, res) {
 		res.send(result);
 	});
 });
+
 
 var host = process.argv[2] || server.address().address;
 var port = process.argv[3] || 3000;
