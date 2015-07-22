@@ -23,7 +23,7 @@ app.get('/getInfos/:groupName/:meetupKey', function (req, res) {
 });
 
 
-var host = process.argv[2] || server.address().address;
+var host = process.argv[2] || "0.0.0.0";
 var port = process.argv[3] || 3000;
 var server = app.listen(port, host, function () {
 	console.log('Example app listening at http://%s:%s', host, port);
